@@ -76,11 +76,11 @@ for (let i = 0; i < 30; i++) {
 function zmck() {
    if ($request.url.indexOf("index") > -1) {
     $.setdata(JSON.stringify($request.url),'zmurl')
-    $.log(zmurl)
+    $.log(`[${$.name}] 获取zmurl✅: 成功,zmurl: ${zmurl}`)
     $.setdata(JSON.stringify($request.headers),'zmhd')
-$.log(zmhd)
+$.log(`[${$.name}] zmhd✅: 成功,zmhd: ${zmhd}`)
     $.setdata($request.body,'zmbody')
-$.log(zmbody)
+$.log(`[${$.name}] zmbody✅: 成功,zmbody: ${zmbody}`)
    $.msg($.name,"","芝嫲视频headers获取成功！")
    $.msg($.name,"","芝嫲视频body获取成功！")
     }
